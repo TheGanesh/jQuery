@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--suppress HtmlUnknownTarget -->
+<html>
+
+  <head>
+    <title>Boom!</title>
+    <link rel="stylesheet" type="text/css" href="../styles/core.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <style type="text/css">
+      img { cursor: pointer; }
+    </style>
+    <script type="text/javascript">
+
+      $(function(){
+
+        $('img').click(function(){
+          $('#boom').get(0).play();
+        });
+
+      });
+
+    </script>
+  </head>
+
+  <body>
+
+    <audio id="boom" src="../sounds/thunder.wav" preload="auto"></audio>
+
+    <img src="../images/boom.jpg">
+
+  </body>
+
+</html>

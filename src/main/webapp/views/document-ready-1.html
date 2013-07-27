@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Got JavaScript?</title>
+    <link rel="stylesheet" type="text/css" href="../styles/core.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <style type="text/css">
+      div.pane { border: 2px ridge maroon; width: 32em; background-color: silver; margin: 1em auto; padding: 1em;  }
+      #notice { background-color: #ffc; }
+      #loginPane { display: none; }
+    </style>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+        $('#notice').hide();
+        $('#loginPane').show();
+      });
+
+    </script>
+  </head>
+
+  <body>
+
+    <div id="notice" class="pane">
+      JavaScript must be enabled for you to use this web application. Please enable JavaScript in your browser and reload this page. Thanks.
+    </div>
+
+    <div id="loginPane" class="pane">
+      <form action="/authenticate" method="post">
+
+        <div>
+          <label>
+            Username:
+            <input type="text" name="username">
+          </label>
+        </div>
+
+        <div>
+          <label>
+            Password:
+            <input type="password" name="password">
+          </label>
+        </div>
+
+        <div>
+          <input type="submit" value="Login">
+        </div>
+
+      </form>
+    </div>
+
+  </body>
+
+</html>

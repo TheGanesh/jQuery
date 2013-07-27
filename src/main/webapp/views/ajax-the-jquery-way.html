@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ajax, the jQuery way</title>
+    <link rel="stylesheet" type="text/css" href="../styles/core.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+
+      $(function(){
+
+        $('#testForm').submit(function(){
+          $('#targetDiv').load('/jquery/SampleServlet',{ value: $('#testValue').val() });
+          return false;
+        });
+
+      });
+
+    </script>
+  </head>
+
+  <body>
+
+    <form id="testForm" action="/jquery/SampleServlet" method="post">
+      <label for="testValue">Enter a value:</label>
+      <input type="text" name="value" id="testValue">
+      <input type="submit">
+    </form>
+
+    <div id="targetDiv"></div>
+
+  </body>
+</html>
